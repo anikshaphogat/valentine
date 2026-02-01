@@ -4,109 +4,79 @@
 <meta charset="UTF-8">
 <title>Aryan ❤️</title>
 <style>
-    body {
-        margin: 0;
-        height: 100vh;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Segoe UI', sans-serif;
-        overflow: hidden;
-    }
-
-    .box {
-        text-align: center;
-        background: white;
-        padding: 45px;
-        border-radius: 25px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-        position: relative;
-        max-width: 350px;
-    }
-
-    h1 {
-        color: #ff4d6d;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 16px;
-        color: #444;
-        margin-bottom: 30px;
-    }
-
-    button {
-        padding: 12px 28px;
-        font-size: 18px;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        margin: 10px;
-        transition: 0.3s;
-        position: absolute;
-    }
-
-    #yesBtn {
-        position: static;
-        background: #ff4d6d;
-        color: white;
-    }
-
-    #noBtn {
-        background: #555;
-        color: white;
-    }
-
-    .celebrate {
-        font-size: 20px;
-        color: #ff4d6d;
-        margin-top: 25px;
-        display: none;
-    }
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+.box{
+text-align:center;
+background:white;
+padding:45px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+position:relative;
+max-width:350px;
+}
+h1{color:#ff4d6d;margin-bottom:20px;}
+p{font-size:16px;color:#444;margin-bottom:30px;}
+button{
+padding:12px 28px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin:10px;
+position:absolute;
+}
+#yesBtn{
+position:static;
+background:#ff4d6d;
+color:white;
+}
+#noBtn{
+background:#555;
+color:white;
+}
+.celebrate{
+font-size:20px;
+color:#ff4d6d;
+margin-top:25px;
+display:none;
+}
 </style>
 </head>
 <body>
-
 <div class="box">
-    <h1>Aryan, will you be my Valentine? 💖</h1>
-    <p>
-        From the moment you came into my life, everything feels softer, brighter, and happier.  
-        You are my comfort, my favorite notification, and my safest place.  
-        So tell me…
-    </p>
-
-    <button id="yesBtn">Yes 😍</button>
-    <button id="noBtn">No 😜</button>
-
-    <div class="celebrate" id="message">
-        Yayyy!! 💞<br><br>
-        Happy Valentine’s Day, Aryan! ❤️<br>
-        I’m so lucky to have you. Forever sounds perfect with you.
-    </div>
+<h1>Aryan, will you be my Valentine? 💖</h1>
+<p>You are my comfort, my favorite notification, and my safest place.</p>
+<button id="yesBtn">Yes 😍</button>
+<button id="noBtn">No 😜</button>
+<div class="celebrate" id="message">
+Yayyy!! Happy Valentine’s Day ❤️<br>I’m so lucky to have you.
 </div>
-
+</div>
 <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-    const message = document.getElementById("message");
-
-    function moveButton() {
-        const x = Math.random() * (window.innerWidth - 100);
-        const y = Math.random() * (window.innerHeight - 50);
-        noBtn.style.left = x + "px";
-        noBtn.style.top = y + "px";
-    }
-
-    noBtn.addEventListener("mouseover", moveButton);
-    noBtn.addEventListener("click", moveButton);
-
-    yesBtn.addEventListener("click", () => {
-        message.style.display = "block";
-        yesBtn.style.display = "none";
-        noBtn.style.display = "none";
-    });
+const noBtn=document.getElementById("noBtn");
+const yesBtn=document.getElementById("yesBtn");
+const message=document.getElementById("message");
+function moveButton(){
+const x=Math.random()*(window.innerWidth-100);
+const y=Math.random()*(window.innerHeight-50);
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+}
+noBtn.addEventListener("mouseover",moveButton);
+yesBtn.addEventListener("click",()=>{
+message.style.display="block";
+yesBtn.style.display="none";
+noBtn.style.display="none";
+});
 </script>
-
 </body>
 </html>
